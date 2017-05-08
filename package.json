@@ -12,6 +12,7 @@
   "dependencies": {
     "commander": "^2.9.0",
     "fs-extra": "^3.0.1",
+    "highlightjs": "^9.10.0",
     "underscore": "^1.8.3"
   },
   "devDependencies": {

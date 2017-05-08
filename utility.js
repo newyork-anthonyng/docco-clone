@@ -1,3 +1,5 @@
+const highlightjs = require('highlightjs');
+
 const parseLines = (content) => {
   const results = [];
 

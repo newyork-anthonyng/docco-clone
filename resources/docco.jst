@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" media="all" href="./docco.css" />
+</head>
+<body>
+  <div id="container">
+    <ul class="sections">
+      <% for (var i=0, l=sections.length; i<l; i++) { %>
+      <% var section = sections[i]; %>
+      <li>
+        <div class="annotation">
+          <%= section.docText %>
+        </div>
+
+        <% if (section.codeText.replace(/\s/gm, '') != '') { %>
+        <div class="content"><%= section.codeHtml %></div>
+        <% } %>
+      </li>
+      <% } %>
+    </ul>
+  </div>
+</body>
+</html>
