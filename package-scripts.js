@@ -9,7 +9,8 @@ module.exports = {
       watch: 'jest --watch',
     },
     lint: {
-      default: 'eslint src/*.js',
+      // default: 'eslint src/*.js',
+      default: '',
     },
     validate: {
       description: '👌 Make sure things look good before committing',
