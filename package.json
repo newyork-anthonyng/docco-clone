@@ -1,11 +1,12 @@
 {
   "name": "docco-clone",
-  "version": "1.0.0",
+  "version": "0.0.0-semantically-released",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nps",
-    "precommit": "npm start validate"
+    "precommit": "npm start validate",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +23,8 @@
     "eslint-config-airbnb-base": "^11.1.3",
     "eslint-plugin-import": "^2.2.0",
     "jest": "^20.0.0",
-    "nps": "^5.1.0"
+    "nps": "^5.1.0",
+    "semantic-release": "^6.3.6"
   },
   "jest": {
     "coverageThreshold": {
@@ -32,12 +34,18 @@
         "lines": 100,
         "statements": 100
       },
-      "roots": ["src/"]
+      "roots": [
+        "src/"
+      ]
     }
   },
   "config": {
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/newyork-anthonyng/docco-lite.git"
   }
 }
