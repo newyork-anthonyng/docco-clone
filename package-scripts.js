@@ -21,7 +21,7 @@ module.exports = {
     },
     reportCoverage: {
       description: 'Report test coverage to codecov',
-      default: 'codecov',
+      default: 'cat ./coverage/lcov.info | codecov',
     },
   },
 };
