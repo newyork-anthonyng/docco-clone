@@ -8,7 +8,6 @@ const parseLines = (content) => {
     docText: '',
   };
   for (let i = 0; i < content.length; i++) {
-    console.log('line change');
     const currentLine = content[i];
 
     if (currentLine.match(/^\/\//)) {
