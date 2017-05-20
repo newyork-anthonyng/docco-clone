@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`complete should copy the correct files to the correct location 1`] = `
+Array [
+  Array [
+    "resources/docco.css",
+    "docs/docco.css",
+  ],
+]
+`;
+
+exports[`createDocForFile should log error when  1`] = `
+Array [
+  "[31m😓 Uh oh. Something went wrong with invalidFile.js[39m",
+]
+`;
+
+exports[`createDocForFile should log error when source file was not found 1`] = `
+Array [
+  "[31m🚫🔎 Uh oh. We couldn't find the missingFile.js[39m",
+]
+`;

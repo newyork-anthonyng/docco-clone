@@ -11,5 +11,6 @@
       "error",
       {"allowForLoopAfterthoughts": true}
     ],
+    "arrow-body-style": 0
   }
 }
