@@ -3,7 +3,7 @@ const utility = require('./utility');
 describe('utility.parseLines', () => {
   it('should parse one line of code', () => {
     const content = [
-      `console.log('abc');`,
+      'console.log("abc");',
     ];
     const result = utility.parseLines(content);
 
@@ -12,8 +12,8 @@ describe('utility.parseLines', () => {
 
   it('should parse multiple lines of code', () => {
     const content = [
-      `console.log('abc');`,
-      `console.log('def');`,
+      'console.log("abc");',
+      'console.log("def");',
     ];
     const result = utility.parseLines(content);
 
@@ -42,7 +42,7 @@ describe('utility.parseLines', () => {
   it('should handle one comment before one line of code', () => {
     const content = [
       '// todo1',
-      `console.log('abc');`,
+      'console.log("abc");',
     ];
     const result = utility.parseLines(content);
 
@@ -53,7 +53,7 @@ describe('utility.parseLines', () => {
     const content = [
       '// todo1',
       '// todo2',
-      `console.log('abc');`,
+      'console.log("abc");',
     ];
     const result = utility.parseLines(content);
 
@@ -64,10 +64,10 @@ describe('utility.parseLines', () => {
     const content = [
       '// todo1',
       '// todo2',
-      `console.log('abc');`,
+      'console.log("abc");',
       '// todo3',
       '// todo4',
-      `console.log('def');`,
+      'console.log("def");',
     ];
     const result = utility.parseLines(content);
 

@@ -1,5 +1,11 @@
 const npsUtils = require('nps-utils');
-const concurrent = npsUtils.concurrent;
+const {
+  series,
+  concurrent,
+  rimraf,
+  mkdirp,
+  copy,
+} = npsUtils;
 
 module.exports = {
   scripts: {
@@ -9,20 +15,27 @@ module.exports = {
       watch: 'jest --watch',
     },
     lint: {
-      // default: 'eslint src/*.js',
-      default: '',
+      default: 'eslint src/*.js',
     },
     validate: {
       description: '👌 Make sure things look good before committing',
-      default: concurrent.nps('lint', 'test'),
+      script: concurrent.nps('lint', 'test'),
     },
     commit: {
       description: 'This uses commitizen to help us generate well formatted commit messages',
-      default: 'git-cz',
+      script: 'git-cz',
     },
     reportCoverage: {
       description: 'Report test coverage to codecov',
-      default: 'codecov',
+      script: 'codecov',
+    },
+    build: {
+      description: 'Delete the dist directory and rebuild src code',
+      script: series(
+        rimraf('dist'),
+        mkdirp('dist'),
+        copy('src/index.js dist')
+      ),
     },
   },
 };

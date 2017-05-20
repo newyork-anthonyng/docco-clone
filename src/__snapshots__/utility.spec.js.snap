@@ -3,12 +3,12 @@
 exports[`utility.parseLines should handle multiple comments and lines of code 1`] = `
 Array [
   Object {
-    "codeText": "console.log('abc');",
+    "codeText": "console.log(\\"abc\\");",
     "docText": "// todo1
 // todo2",
   },
   Object {
-    "codeText": "console.log('def');",
+    "codeText": "console.log(\\"def\\");",
     "docText": "// todo3
 // todo4",
   },
@@ -18,7 +18,7 @@ Array [
 exports[`utility.parseLines should handle multiple comments before one line of code 1`] = `
 Array [
   Object {
-    "codeText": "console.log('abc');",
+    "codeText": "console.log(\\"abc\\");",
     "docText": "// todo1
 // todo2",
   },
@@ -28,7 +28,7 @@ Array [
 exports[`utility.parseLines should handle one comment before one line of code 1`] = `
 Array [
   Object {
-    "codeText": "console.log('abc');",
+    "codeText": "console.log(\\"abc\\");",
     "docText": "// todo1",
   },
 ]
@@ -37,11 +37,11 @@ Array [
 exports[`utility.parseLines should parse multiple lines of code 1`] = `
 Array [
   Object {
-    "codeText": "console.log('abc');",
+    "codeText": "console.log(\\"abc\\");",
     "docText": "",
   },
   Object {
-    "codeText": "console.log('def');",
+    "codeText": "console.log(\\"def\\");",
     "docText": "",
   },
 ]
@@ -60,7 +60,7 @@ Array [
 exports[`utility.parseLines should parse one line of code 1`] = `
 Array [
   Object {
-    "codeText": "console.log('abc');",
+    "codeText": "console.log(\\"abc\\");",
     "docText": "",
   },
 ]
