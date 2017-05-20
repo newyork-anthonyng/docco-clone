@@ -1,0 +1,5 @@
+const path = require('path');
+const fse = require('fs-extra');
+const dir = path.join(path.dirname(fse.realpathSync(__filename)), '../');
+const Docco = require(dir + 'src/docco.js');
+Docco.run();
