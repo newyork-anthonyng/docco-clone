@@ -6,13 +6,17 @@ const parseLines = (content) => {
     docText: '',
   };
   for (let i = 0; i < content.length; i++) {
-    const currentLine = content[i];
+    const currentLine = content[i].trim();
 
     if (currentLine.match(/^\/\//)) {
+      const text = currentLine.replace(/\/\/\s*/g, '');
+
+      // if continuation of another line of comments
       if (currentSection.docText) {
-        currentSection.docText += `\n${currentLine}`;
+        currentSection.docText += `\n${text}`;
+      // else new line of comment
       } else {
-        currentSection.docText = `${currentLine}`;
+        currentSection.docText = `${text}`;
       }
     } else {
       currentSection.codeText = currentLine;

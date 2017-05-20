@@ -4,13 +4,13 @@ exports[`utility.parseLines should handle multiple comments and lines of code 1`
 Array [
   Object {
     "codeText": "console.log(\\"abc\\");",
-    "docText": "// todo1
-// todo2",
+    "docText": "todo1
+todo2",
   },
   Object {
     "codeText": "console.log(\\"def\\");",
-    "docText": "// todo3
-// todo4",
+    "docText": "todo3
+todo4",
   },
 ]
 `;
@@ -19,8 +19,8 @@ exports[`utility.parseLines should handle multiple comments before one line of c
 Array [
   Object {
     "codeText": "console.log(\\"abc\\");",
-    "docText": "// todo1
-// todo2",
+    "docText": "todo1
+todo2",
   },
 ]
 `;
@@ -29,7 +29,7 @@ exports[`utility.parseLines should handle one comment before one line of code 1`
 Array [
   Object {
     "codeText": "console.log(\\"abc\\");",
-    "docText": "// todo1",
+    "docText": "todo1",
   },
 ]
 `;
@@ -51,8 +51,8 @@ exports[`utility.parseLines should parse multiple lines of comments 1`] = `
 Array [
   Object {
     "codeText": "",
-    "docText": "// todo1
-// todo2",
+    "docText": "todo1
+todo2",
   },
 ]
 `;
@@ -70,7 +70,7 @@ exports[`utility.parseLines should parse one line of comments 1`] = `
 Array [
   Object {
     "codeText": "",
-    "docText": "// todo1",
+    "docText": "todo1",
   },
 ]
 `;
