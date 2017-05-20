@@ -34,7 +34,7 @@ module.exports = {
       script: series(
         rimraf('dist'),
         mkdirp('dist'),
-        copy('src/index.js dist')
+        'rollup --config'
       ),
     },
   },
