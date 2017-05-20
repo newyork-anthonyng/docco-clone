@@ -29,13 +29,5 @@ module.exports = {
       description: 'Report test coverage to codecov',
       script: 'codecov',
     },
-    // build: {
-    //   description: 'Delete the dist directory and rebuild src code',
-    //   script: series(
-    //     rimraf('dist'),
-    //     mkdirp('dist'),
-    //     'rollup --config'
-    //   ),
-    // },
   },
 };

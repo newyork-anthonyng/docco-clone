@@ -1,6 +1,6 @@
 const path = {
-  join: jest.fn((a, b) => {
-    return `${a}/${b}`;
+  join: jest.fn((a, b, c, d) => {
+    return `${a}/${b}/${c}/${d}`;
   }),
   basename: jest.fn(),
 };

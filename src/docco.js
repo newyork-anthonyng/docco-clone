@@ -24,7 +24,7 @@ const Docco = (function Docco() {
         const destination = path.join('docs', `${path.basename(sourceFile, '.js')}.html`);
 
         // this is the template that will be used from `resources/docco.jst'`
-        const templateSource = fse.readFileSync(path.join('resources', 'docco.jst')).toString();
+        const templateSource = fse.readFileSync(path.join(__dirname, '..', 'resources', 'docco.jst')).toString();
         const template = _.template(templateSource);
 
         // create the HTML for the code section
@@ -48,7 +48,7 @@ const Docco = (function Docco() {
 
   const complete = () => {
     // copy CSS files over
-    return fse.copy(path.join('resources', 'docco.css'), path.join('docs', 'docco.css'))
+    return fse.copy(path.join(__dirname, '..', 'resources', 'docco.css'), path.join('docs', 'docco.css'))
       .then(() => {
         log('🎂 Finished');
       });

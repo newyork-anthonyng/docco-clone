@@ -38,14 +38,4 @@ describe('createDocForFile', () => {
   });
 });
 
-describe('complete', () => {
-  it('should copy the correct files to the correct location', () => {
-    const result = docco.complete();
-
-    expect(fse.copy).toHaveBeenCalledTimes(1);
-    expect(fse.copy.mock.calls).toMatchSnapshot();
-    return result;
-  });
-});
-
 // describe('run');
