@@ -10,13 +10,11 @@
       <% for (var i=0, l=sections.length; i<l; i++) { %>
       <% var section = sections[i]; %>
       <li>
-        <div class="annotation">
+        <div class="<%= section.docText === '' ? 'annotation' : 'annotation active' %>">
           <%= section.docText %>
         </div>
 
-        <% if (section.codeText.replace(/\s/gm, '') != '') { %>
         <div class="content"><%= section.codeHtml %></div>
-        <% } %>
       </li>
       <% } %>
     </ul>
