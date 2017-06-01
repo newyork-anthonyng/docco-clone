@@ -73,4 +73,25 @@ describe('utility.parseLines', () => {
 
     expect(result).toMatchSnapshot();
   });
+
+  it('should handle multi-line comments', () => {
+    const content = [
+      '/* This is the first line of a multi-line comment',
+      ' * This is the second line of a multi-line comment',
+      ' * This is the third line of a multi-line comment',
+      ' */',
+    ];
+    const result = utility.parseLines(content);
+
+    expect(result).toMatchSnapshot();
+  });
+
+  it('should handle single-line comments using /* */', () => {
+    const content = [
+      '/* This is a single line of single-line comment */',
+    ];
+    const result = utility.parseLines(content);
+
+    expect(result).toMatchSnapshot();
+  });
 });

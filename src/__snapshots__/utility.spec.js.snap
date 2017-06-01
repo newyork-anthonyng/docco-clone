@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`utility.parseLines should handle multi-line comments 1`] = `
+Array [
+  Object {
+    "codeText": "",
+    "docText": "This is the first line of a multi-line comment
+This is the second line of a multi-line comment
+This is the third line of a multi-line comment
+",
+  },
+]
+`;
+
 exports[`utility.parseLines should handle multiple comments and lines of code 1`] = `
 Array [
   Object {
@@ -30,6 +42,15 @@ Array [
   Object {
     "codeText": "console.log(\\"abc\\");",
     "docText": "todo1",
+  },
+]
+`;
+
+exports[`utility.parseLines should handle single-line comments using /* */ 1`] = `
+Array [
+  Object {
+    "codeText": "",
+    "docText": "This is a single line of single-line comment",
   },
 ]
 `;
