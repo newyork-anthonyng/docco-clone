@@ -9,6 +9,7 @@ const parseLines = (content) => {
     const currentLine = content[i].trim();
 
     if (currentLine.match(/^\/\//)) {
+    // handle single line comments
       const text = currentLine.replace(/\/\/\s*/g, '');
 
       // if continuation of another line of comments
@@ -18,7 +19,18 @@ const parseLines = (content) => {
       } else {
         currentSection.docText = `${text}`;
       }
+    } else if (currentLine.match(/^\/\*|^\*|^\*\//)) {
+      // handle multiline comments
+      // the Regular Expression matches /*, *, and */
+      const text = currentLine.replace(/\/|\*/g, '').trim();
+
+      if (currentLine.match(/^\/\*/)) {
+        currentSection.docText = text;
+      } else {
+        currentSection.docText += `\n${text}`;
+      }
     } else {
+      // handle source code
       currentSection.codeText = currentLine;
 
       results.push(currentSection);
