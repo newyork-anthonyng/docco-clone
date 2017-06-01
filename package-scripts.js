@@ -29,5 +29,9 @@ module.exports = {
       description: 'Report test coverage to codecov',
       script: 'codecov',
     },
+    build: {
+      description: 'Build example from /example/app.js file',
+      script: 'node bin/docco example/app.js',
+    },
   },
 };

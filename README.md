@@ -19,6 +19,8 @@ To use `docco-lite` to create documentation for a file, `app.js`, run:
 ./node_modules/.bin/docco-lite app.js
 ```
 
+See [here](http://newyork-anthonyng.github.io/docco-lite/) for an example of the documentation created by `docco-lite`.
+
 ## Contributing
 This project uses [`commitizen`](https://github.com/commitizen/cz-cli) and [`nps`](https://github.com/kentcdodds/nps).
 To commit, run:
