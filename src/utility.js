@@ -31,7 +31,7 @@ const parseLines = (content) => {
       }
     } else {
       // handle source code
-      currentSection.codeText = currentLine;
+      currentSection.codeText = content[i];
 
       results.push(currentSection);
       currentSection = {

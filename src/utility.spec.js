@@ -10,6 +10,15 @@ describe('utility.parseLines', () => {
     expect(result).toMatchSnapshot();
   });
 
+  it('should preserve white space of code text', () => {
+    const content = [
+      '    console.log("abc");',
+    ];
+    const result = utility.parseLines(content);
+
+    expect(result).toMatchSnapshot();
+  });
+
   it('should parse multiple lines of code', () => {
     const content = [
       'console.log("abc");',
