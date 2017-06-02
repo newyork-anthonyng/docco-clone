@@ -95,3 +95,12 @@ Array [
   },
 ]
 `;
+
+exports[`utility.parseLines should preserve white space of code text 1`] = `
+Array [
+  Object {
+    "codeText": "    console.log(\\"abc\\");",
+    "docText": "",
+  },
+]
+`;
